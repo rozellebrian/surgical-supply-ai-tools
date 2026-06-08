@@ -97,3 +97,7 @@ Compound or kit: Multi-component kits may need individual codes per component
 rather than a single kit code. Check the descriptor carefully.
 S-codes and T-codes: Not recognized by Medicare. Only use on Medicaid or commercial
 payer claims where the payer specifically requires them.
+Reference Files
+
+references/hcpcs-by-series.md — Quick reference table of common codes organized by
+series letter. Read this before going to the web for any lookup.
