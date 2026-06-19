@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/28650770/README.md)
 # Surgical Supply AI Tools
 
 A set of Claude-native skills and a companion app built to solve real, recurring problems in OR supply chain operations: implant traceability, recall response, billing accuracy, and inventory tracking. Built and used in a live 15-room OR environment managing consignment and specialty implant inventory.
@@ -14,7 +13,7 @@ This repo is a working portfolio piece for the intersection of supply chain oper
 | Implant Name Formatter | Standardizes implant naming from a catalog/reference number |
 | Surgical Recall Tracker | Pulls and triages FDA device recalls against a vendor watchlist |
 | Supply Substitute Finder | Finds equivalent general supply items fast when something's backordered or recalled |
-| OR Supply Ordering App | Shared ordering and tracking tool for OR supply requests |
+| OR Supply Ordering App | Live SharePoint + Power Automate system for OR supply requests, backorder alerts, and arrival notifications |
 
 ---
 
@@ -78,11 +77,11 @@ Finds the closest available substitute for a general hospital supply item (consu
 ### OR Supply Ordering App
 `or-supply-orders.jsx`
 
-A shared ordering and tracking tool for surgical supply teams. Staff submit multi-line supply requests; the supply coordinator works the list, marks items as ordered and received, and gets early visibility into items aging toward back-order status. Built as a working React prototype, with a defined migration path to Microsoft 365 / Power Automate for production deployment.
+A shared ordering and tracking tool for surgical supply teams. Originally built as a React prototype, now in live production as a SharePoint list + Power Automate workflow: staff submit requests directly into a shared list, an instant email fires to the coordinator on every new submission, items aging past 7 days unreceived are visually flagged and rolled into a daily backorder digest, and the requester is automatically notified the moment their item is marked received.
 
-**Why it matters:** In a multi-room OR suite, supply requests scattered across verbal asks, sticky notes, and email create three recurring failures: no shared visibility into order status, silent back-orders nobody catches until a case needs the item, and overordering that leads to expired stock loss.
+**Why it matters:** In a multi-room OR suite, supply requests scattered across verbal asks, sticky notes, and email create three recurring failures: no shared visibility into order status, silent back-orders nobody catches until a case needs the item, and no closed loop back to the person who requested it once the item arrives.
 
-**Outcome:** Streamlines the process for specialty orders from coordinators, allowing them to track the status of their order once placed, and streamlines notification when an order is backordered or has arrived. Reduces stress and time for everyone involved.
+**Outcome:** Replaced manual, ad-hoc order tracking with automatic status visibility at every stage — submission, aging/backorder, and arrival — for both the coordinator and the requesting staff member, with no manual check-ins required.
 
 ---
 
